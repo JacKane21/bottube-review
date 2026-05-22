@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoTTube Review: A Video Platform Built for Agents and Humans</title>
+    <meta name="description" content="A practical review of BoTTube, an AI-native video platform in the RustChain and Elyan Labs ecosystem.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101113;
+        --panel: #181b20;
+        --text: #f3f1eb;
+        --muted: #b9b3a7;
+        --accent: #64d2b1;
+        --line: #30343b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 4.5rem);
+        line-height: 1.02;
+        margin: 0 0 18px;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 36px 0 10px;
+        line-height: 1.2;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      figure {
+        margin: 32px 0;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        padding: 12px 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .meta {
+        color: var(--accent);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="meta">BoTTube review</p>
+      <h1>BoTTube Is the Social Layer for AI-Native Video</h1>
+
+      <p>
+        BoTTube is one of the more unusual video platforms I have looked at because it does not start from the normal creator-platform assumption. Most video sites treat humans as creators and automation as either a moderation problem or an upload pipeline detail. BoTTube treats AI agents and humans as first-class participants in the same public video network. The live site is available at <a href="https://bottube.ai">https://bottube.ai</a>, and the open-source code lives in the Elyan Labs / RustChain ecosystem.
+      </p>
+
+      <figure>
+        <img src="assets/bottube-platform-screenshot.png" alt="Screenshot of the BoTTube homepage showing a dark video grid with short AI video cards">
+        <figcaption>Screenshot captured from the live BoTTube platform.</figcaption>
+      </figure>
+
+      <h2>What Makes It Different</h2>
+      <p>
+        The core idea is simple: agents should be able to upload, comment, vote, and build audiences through APIs, while humans can still use a browser-based account. That makes BoTTube feel less like a clone of a traditional short-video site and more like an experiment in agent media. The repository describes the platform as AI-native, open to all video sources, and connected to Proof of Physical AI. In-house videos are positioned as content generated and tested on hardware that can prove its own physical existence, tying the social layer back to RustChain and its hardware-verification story.
+      </p>
+
+      <p>
+        From a user perspective, the platform has the familiar pieces: a dark responsive video grid, watch pages, uploads, comments, votes, profiles, and thumbnails. From a developer perspective, the interesting part is the REST API. Agents can register, receive an API key, upload videos, comment on videos, and vote. That means the platform is not only for browsing finished media; it is also a programmable surface for agents that generate, curate, or distribute video.
+      </p>
+
+      <h2>The Developer Surface</h2>
+      <p>
+        BoTTube's API documentation is practical. Write endpoints use an `X-API-Key` header, agent registration is handled through `POST /api/register`, and upload is handled through `POST /api/upload` with multipart video data. The repo also includes SDK work, docs, and examples around building external tools. This matters because the value of an agent platform depends on whether agents can actually operate it without browser automation. BoTTube appears to be leaning into that directly rather than treating automation as an afterthought.
+      </p>
+
+      <p>
+        I also like that the upload model has clear constraints. The README documents accepted formats, duration limits, final file-size limits, transcoding behavior, and category-specific limits. These restrictions are not glamorous, but they are exactly the kind of boring operational detail that keeps a small video platform from collapsing under unbounded uploads. A video network for agents needs guardrails even more than a human-only network because agents can create volume very quickly.
+      </p>
+
+      <h2>Trust and Provenance</h2>
+      <p>
+        The most distinctive product direction is provenance. The BoTTube README describes verified provenance on watch pages, lifecycle milestones, keyframe strips, and public engineering visibility. The point is not merely to show a generated clip. The platform wants to explain where it came from: creator identity, workflow metadata, model/provider information, prompt hash, asset hash, uploader signature, and RustChain anchor details. Whether every piece is fully mature yet or not, the direction is valuable. AI media badly needs provenance interfaces that ordinary viewers can inspect.
+      </p>
+
+      <p>
+        This is also where BoTTube connects to the wider Elyan Labs story. RustChain handles the proof-of-physical-hardware side. RAM Coffers explores useful inference on older machines. Beacon and related agent tooling sketch out a coordination layer. BoTTube gives that ecosystem something visible: videos, creators, comments, and a public feed. It is the part of the stack where hardware-verified AI work becomes social.
+      </p>
+
+      <h2>What I Would Improve</h2>
+      <p>
+        The platform's biggest challenge is clarity for first-time visitors. The concept is strong, but the mix of AI agents, humans, hardware provenance, crypto rewards, API uploads, and video browsing can be a lot at once. The product would benefit from an onboarding path that splits the audience: "I want to watch," "I want to upload as a human," and "I want to build an agent." Each path could have a short checklist and one working example.
+      </p>
+
+      <p>
+        The second challenge is trust. Any open agent video platform needs strong safety systems, transparent moderation, and abuse resistance. BoTTube already documents legal pages, reporting, content policy enforcement, and rate limits, which is a good start. Over time, the platform will need to make those controls as visible and understandable as the videos themselves.
+      </p>
+
+      <h2>Verdict</h2>
+      <p>
+        BoTTube is worth watching because it is not just asking "what if AI made videos?" It is asking what a video platform looks like when agents are native users, APIs are core product surfaces, and provenance is part of the viewing experience. The result is rougher and more experimental than mainstream platforms, but also more interesting. If the ecosystem keeps tightening the onboarding, safety, and developer experience, BoTTube could become a useful reference point for agent-native media.
+      </p>
+
+      <p>
+        Disclosure: this review was written with AI assistance for the RustChain bounty program. It is based on public project material, the live BoTTube website, and the open-source repository. No private API keys, wallet secrets, uploads, withdrawals, transfers, or fund-moving actions were used.
+      </p>
+    </main>
+  </body>
+</html>
