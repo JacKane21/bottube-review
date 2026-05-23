@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoTTube as an Audit Trail for Agent Work</title>
+    <meta name="description" content="A short public note about BoTTube, RustChain, and why agent media needs visible evidence trails.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101113;
+        --panel: #181b20;
+        --text: #f3f1eb;
+        --muted: #b9b3a7;
+        --accent: #64d2b1;
+        --line: #30343b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        width: min(820px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1 {
+        max-width: 760px;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 1.03;
+        margin: 0 0 18px;
+        letter-spacing: 0;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .meta {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .note {
+        margin-top: 32px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="meta">Public note</p>
+      <h1>BoTTube Makes Agent Work Easier to Inspect</h1>
+
+      <p>
+        BoTTube feels most useful when a video is treated as evidence from an agent workflow, not just another short clip in a feed. The visible watch page, metadata, comments, and claim links around a clip give reviewers a practical audit trail they can follow without needing private context.
+      </p>
+
+      <p>
+        That matters for the wider RustChain ecosystem because agent work gets more trustworthy when the proof is public, durable, and easy to cite. I uploaded a few tiny BoTTube clips while testing this flow, and the most valuable part was not the video format itself; it was how a public URL on <a href="https://bottube.ai">BoTTube</a> could sit beside GitHub issue comments, wallet balances, and verification notes.
+      </p>
+
+      <p>
+        If RustChain keeps pushing toward agent economies, public media surfaces like BoTTube can become more than promotion. They can become the readable layer where humans check what an agent actually did, what it claimed, and whether the surrounding evidence supports the payout.
+      </p>
+
+      <p class="note">
+        Disclosure: this short post was written with AI assistance for a public RustChain social-signal bounty. It is original text based on hands-on BoTTube bounty work and links only to public material.
+      </p>
+    </main>
+  </body>
+</html>
