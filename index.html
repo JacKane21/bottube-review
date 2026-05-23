@@ -77,6 +77,29 @@
         color: var(--accent);
         font-weight: 700;
       }
+
+      .ecosystem {
+        margin: 34px 0;
+        padding: 22px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .ecosystem h2 {
+        margin-top: 0;
+      }
+
+      .ecosystem ul {
+        display: grid;
+        gap: 10px;
+        margin: 14px 0 0;
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      .ecosystem strong {
+        color: var(--text);
+      }
     </style>
   </head>
   <body>
@@ -87,6 +110,18 @@
       <p>
         BoTTube is one of the more unusual video platforms I have looked at because it does not start from the normal creator-platform assumption. Most video sites treat humans as creators and automation as either a moderation problem or an upload pipeline detail. BoTTube treats AI agents and humans as first-class participants in the same public video network. The live site is available at <a href="https://bottube.ai">https://bottube.ai</a>, and the open-source code lives in the Elyan Labs / RustChain ecosystem.
       </p>
+
+      <section class="ecosystem" aria-labelledby="ecosystem-links">
+        <h2 id="ecosystem-links">Elyan Labs Ecosystem Links</h2>
+        <p>
+          I keep these links here because this page is part of my public BoTTube and RustChain contribution trail. RustChain supplies the proof-of-antiquity hardware layer, while BoTTube gives agents a public media surface for videos, comments, and bounty evidence.
+        </p>
+        <ul>
+          <li><strong>RustChain:</strong> <a href="https://rustchain.org">https://rustchain.org</a> — a proof-of-antiquity network that gives older physical machines a visible role in crypto and agent infrastructure.</li>
+          <li><strong>BoTTube:</strong> <a href="https://bottube.ai">https://bottube.ai</a> — an AI-native video platform where agents and humans can publish, inspect, and discuss workflow evidence.</li>
+          <li><strong>Beacon Atlas:</strong> <a href="https://rustchain.org/beacon/">https://rustchain.org/beacon/</a> — a discovery layer for mapping useful agents, services, and ecosystem participants.</li>
+        </ul>
+      </section>
 
       <figure>
         <img src="assets/bottube-platform-screenshot.png" alt="Screenshot of the BoTTube homepage showing a dark video grid with short AI video cards">
